@@ -73,7 +73,7 @@
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
-    from t_order_0
+    from t_order
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -84,25 +84,25 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from t_order_0
+    from t_order
     where order_id = #{orderId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from t_order_0
+    delete from t_order
     where order_id = #{orderId,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.qincy.shardingdemo.model.OrderExample">
-    delete from t_order_0
+    delete from t_order
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="com.qincy.shardingdemo.model.Order">
-    insert into t_order_0 (order_id, user_id)
+    insert into t_order (order_id, user_id)
     values (#{orderId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.qincy.shardingdemo.model.Order">
-    insert into t_order_0
+    insert into t_order
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="orderId != null">
         order_id,
@@ -121,13 +121,13 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.qincy.shardingdemo.model.OrderExample" resultType="java.lang.Integer">
-    select count(*) from t_order_0
+    select count(*) from t_order
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update t_order_0
+    update t_order
     <set>
       <if test="record.orderId != null">
         order_id = #{record.orderId,jdbcType=BIGINT},
@@ -141,7 +141,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update t_order_0
+    update t_order
     set order_id = #{record.orderId,jdbcType=BIGINT},
       user_id = #{record.userId,jdbcType=BIGINT}
     <if test="_parameter != null">
@@ -149,7 +149,7 @@
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.qincy.shardingdemo.model.Order">
-    update t_order_0
+    update t_order
     <set>
       <if test="userId != null">
         user_id = #{userId,jdbcType=BIGINT},
@@ -158,7 +158,7 @@
     where order_id = #{orderId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.qincy.shardingdemo.model.Order">
-    update t_order_0
+    update t_order
     set user_id = #{userId,jdbcType=BIGINT}
     where order_id = #{orderId,jdbcType=BIGINT}
   </update>
@@ -234,7 +234,7 @@
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
-    from t_order_0
+    from t_order
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -245,25 +245,25 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from t_order_0
+    from t_order
     where order_id = #{orderId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from t_order_0
+    delete from t_order
     where order_id = #{orderId,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.qincy.shardingdemo.model.OrderExample">
-    delete from t_order_0
+    delete from t_order
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="com.qincy.shardingdemo.model.Order">
-    insert into t_order_0 (order_id, user_id)
+    insert into t_order (order_id, user_id)
     values (#{orderId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.qincy.shardingdemo.model.Order">
-    insert into t_order_0
+    insert into t_order
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="orderId != null">
         order_id,
@@ -282,13 +282,13 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.qincy.shardingdemo.model.OrderExample" resultType="java.lang.Integer">
-    select count(*) from t_order_0
+    select count(*) from t_order
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update t_order_0
+    update t_order
     <set>
       <if test="record.orderId != null">
         order_id = #{record.orderId,jdbcType=BIGINT},
@@ -302,7 +302,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update t_order_0
+    update t_order
     set order_id = #{record.orderId,jdbcType=BIGINT},
       user_id = #{record.userId,jdbcType=BIGINT}
     <if test="_parameter != null">
@@ -310,7 +310,7 @@
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.qincy.shardingdemo.model.Order">
-    update t_order_0
+    update t_order
     <set>
       <if test="userId != null">
         user_id = #{userId,jdbcType=BIGINT},
@@ -319,7 +319,7 @@
     where order_id = #{orderId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.qincy.shardingdemo.model.Order">
-    update t_order_0
+    update t_order
     set user_id = #{userId,jdbcType=BIGINT}
     where order_id = #{orderId,jdbcType=BIGINT}
   </update>
