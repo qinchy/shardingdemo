@@ -5,7 +5,10 @@ import com.qincy.shardingdemo.model.OrderExample;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
+@Component
+//加上component有什么用呢？在入口处已经加了MapperScan了呀？
 public interface OrderMapper {
     int countByExample(OrderExample example);
 
