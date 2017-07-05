@@ -63,7 +63,7 @@ public class DataSourceConfig {
         //使用druid连接数据库
         DruidDataSource result = new DruidDataSource();
         result.setDriverClassName(Driver.class.getName());
-        result.setUrl(String.format("jdbc:mysql://localhost:3306/%s", dataSourceName));
+        result.setUrl(String.format("jdbc:mysql://localhost:3306/%s?characterEncoding=utf8&useSSL=true", dataSourceName));
         result.setUsername("root");
         result.setPassword("admin");
         return result;
