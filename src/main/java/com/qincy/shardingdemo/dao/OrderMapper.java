@@ -3,6 +3,7 @@ package com.qincy.shardingdemo.dao;
 import com.qincy.shardingdemo.model.Order;
 import com.qincy.shardingdemo.model.OrderExample;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface OrderMapper {

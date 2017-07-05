@@ -24,6 +24,6 @@ public class OrderController {
     @RequestMapping("query")
     private Object queryAll() {
         OrderExample orderExample = new OrderExample();
-        return orderService.queryAll(orderExample);
+        return orderService.selectByExample(orderExample);
     }
 }

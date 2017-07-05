@@ -6,6 +6,6 @@ import com.qincy.shardingdemo.model.OrderExample;
 import java.util.List;
 
 public interface OrderService {
-    public String add();
-    public List<Order> queryAll(OrderExample orderExample);
+    String add();
+    List<Order> selectByExample(OrderExample orderExample);
 }

@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value={"com.qincy.shardingdemo"})
+@MapperScan(value="com.qincy.shardingdemo.dao")
 public class ShardingdemoApplication {
 
 	public static void main(String[] args) {

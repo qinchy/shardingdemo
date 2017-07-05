@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.sun.tools.doclint.Entity.or;
-
 @Service
 public class OrderServiceImpl implements OrderService {
 
@@ -35,7 +33,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> queryAll(OrderExample orderExample) {
+    public List<Order> selectByExample(OrderExample orderExample) {
         return orderMapper.selectByExample(orderExample);
     }
 }
